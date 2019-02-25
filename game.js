@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+populate();
 // intervalId = setInterval(decrement, 1000);
 
 })
@@ -15,6 +15,40 @@ var trivia = {
 
 }
 
+function populate(){
+    for(var i = 0; i < trivia.questions.length;i++){
+        var convertI = (i+1).toString();
+        var questionNumber = "question" + convertI;
+        
+        var h2 = $("<h2/>").addClass("question").attr("id", questionNumber);
+        h2.text(convertI+". " + trivia.questions[i]);
+        $("#quiz").append(h2);  
+        
+        
+    }
+    // trivia.questions.forEach(function(index, value){
+    //     var questionNumber = "question" + (value+1);
+        
+    //     for(var i = 0; i < 4; i++){
+    //         // var convertI = (i+1).toString();
+    //         // var questionNumber = "question" + convertI;
+    //         var textInput = trivia.answerChoice.question1[i];
+    //         console.log(textInput);
+            
+    //         var input = $("<input type='radio'/>").addClass("options").attr({name: questionNumber});
+    //         input.text(textInput);
+    //         $("#" + questionNumber).append(input);
+    //         console.log(input);
+            
+            
+    //     }
+    // })
+
+    
+    
+    
+    
+}
 
 
 
