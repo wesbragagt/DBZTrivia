@@ -1,8 +1,23 @@
 $(document).ready(function(){
 
-intervalId = setInterval(decrement, 1000);
+// intervalId = setInterval(decrement, 1000);
 
 })
+
+// TRIVIA, create an array with all the questions that are going to be used
+
+var trivia = {
+    questions:[
+        "What's Goku's real name?", 
+        "Who is the first DBZ fighter to turn Super Sayian 2?"
+    ],
+    answer: ["Kakarot", "Gohan"]
+
+}
+
+
+
+
 
 // GLOBAL TIME COUNTDOWN
 var countdown = 30;
