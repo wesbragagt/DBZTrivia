@@ -6,14 +6,24 @@ populate();
 
 // TRIVIA, create an array with all the questions that are going to be used
 
-var trivia = {
-    questions:[
-        "What's Goku's real name?", 
-        "Who is the first DBZ fighter to turn Super Sayian 2?"
-    ],
-    answer: ["Kakarot", "Gohan"]
+// var trivia = {
+//     questions:[
+//         "What's Goku's real name?", 
+//         "Who is the first DBZ fighter to turn Super Sayian 2?"
+//     ],
+//     answer: ["Kakarot", "Gohan"]
 
-}
+// }
+
+var trivia = [
+    {
+        question: "What's Goku's real name?",
+        options: ["Kakarot", "Gohan", "Bardock", "Trunks"],
+        correct: "Kakarot"
+    }
+
+    
+];
 
 function populate(){
     for(var i = 0; i < trivia.questions.length;i++){
