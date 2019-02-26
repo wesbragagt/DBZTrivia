@@ -1,6 +1,6 @@
 $(document).ready(function() {
   populate();
-  // intervalId = setInterval(decrement, 1000);
+  intervalId = setInterval(decrement, 1000);
 });
 
 // function check submit button
@@ -26,8 +26,10 @@ function check() {
     }
   }
 
-  results.append("<h2>" + "correct: " + correct + "</h2>");
-  results.append("<h2>" + "incorrect: " + incorrect + "</h2>");
+  // Populate the page with results
+
+  results.append("<h2>" + "correct answers: " + correct + "</h2>");
+  //   results.append("<h2>" + "incorrect: " + incorrect + "</h2>");
 }
 
 // TRIVIA, create an array with an object and all the questions that are going to be used
