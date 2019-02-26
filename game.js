@@ -51,6 +51,12 @@ var trivia = [
     question: "Who Killed Frieza?",
     options: ["Gohan", "Raditz", "Vegeta", "Future Trunks"],
     correct: "Future Trunks"
+  },
+
+  {
+    question: "Who Killed Frieza?",
+    options: ["Gohan", "Raditz", "Vegeta", "Future Trunks"],
+    correct: "Future Trunks"
   }
 ];
 // populate the screen with questions and their options to pick
@@ -93,7 +99,7 @@ function populate() {
 }
 
 // GLOBAL TIME COUNTDOWN
-var countdown = 30;
+var countdown = 100;
 var intervalId;
 
 function decrement() {
