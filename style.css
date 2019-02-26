@@ -5,3 +5,13 @@ body {
 .question {
     font-size: 2em;
 }
+
+.label {
+    /* margin-right: 10px; */
+    /* border: 1px solid red;
+    margin-left: px; */
+}
+.input {
+    margin-right: 45px;
+    
+}
