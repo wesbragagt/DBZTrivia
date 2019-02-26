@@ -8,11 +8,16 @@ function check() {
   stop();
   var correct = 0;
   var incorrect = 0;
+  var results = $("#results");
+  // array of select choices
   var selected = [];
+
+  // loop through all inputs which were selected and return a value for them
   $("input:checked").each(function() {
     selected.push($(this).val());
   });
 
+  // loop which will check a number of questions amount of time for matching selections with the correct answers
   for (var i = 0; i < trivia.length; i++) {
     if (selected[i] === trivia[i].correct) {
       correct++;
@@ -21,7 +26,8 @@ function check() {
     }
   }
 
-  console.log("correct: " + correct, "incorrect: " + incorrect);
+  results.append("<h2>" + "correct: " + correct + "</h2>");
+  results.append("<h2>" + "incorrect: " + incorrect + "</h2>");
 }
 
 // TRIVIA, create an array with an object and all the questions that are going to be used
