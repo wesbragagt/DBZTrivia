@@ -8,7 +8,7 @@ function check() {
   stop();
   var correct = 0;
   var incorrect = 0;
-  var results = $("#results");
+  var results = $("#game");
   // array of select choices
   var selected = [];
 
@@ -26,9 +26,12 @@ function check() {
     }
   }
 
-  // Populate the page with results
+  // Populate the page with results and an image
 
-  results.append("<h2>" + "correct answers: " + correct + "</h2>");
+  results.html("<h2>" + "correct answers: " + correct + "</h2>");
+  $(
+    "<img src = 'https://media.giphy.com/media/D1SBnJEaUdZIc/giphy.gif'>"
+  ).appendTo(results);
   //   results.append("<h2>" + "incorrect: " + incorrect + "</h2>");
 }
 
