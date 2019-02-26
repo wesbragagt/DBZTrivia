@@ -1,17 +1,16 @@
 body {
-    font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .question {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .label {
-    /* margin-right: 10px; */
-    /* border: 1px solid red;
+  /* margin-right: 10px; */
+  /* border: 1px solid red;
     margin-left: px; */
 }
 .input {
-    margin-right: 45px;
-    
+  margin-right: 45px;
 }

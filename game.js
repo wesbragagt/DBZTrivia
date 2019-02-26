@@ -26,13 +26,16 @@ function check() {
     }
   }
 
-  // Populate the page with results and an image
+  // Populate the page with results, giff and a button to restart.
 
   results.html("<h2>" + "correct answers: " + correct + "</h2>");
   $(
     "<img src = 'https://media.giphy.com/media/D1SBnJEaUdZIc/giphy.gif'>"
   ).appendTo(results);
-  //   results.append("<h2>" + "incorrect: " + incorrect + "</h2>");
+
+  $("<button onclick='restart();' class='btn btn-lg btn-success'/>")
+    .text("Restart")
+    .appendTo(results);
 }
 
 // TRIVIA, create an array with an object and all the questions that are going to be used
@@ -158,4 +161,8 @@ function decrement() {
 }
 function stop() {
   clearInterval(intervalId);
+}
+
+function restart() {
+  location.reload();
 }
