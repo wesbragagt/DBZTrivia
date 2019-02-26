@@ -54,9 +54,51 @@ var trivia = [
   },
 
   {
-    question: "Who Killed Frieza?",
-    options: ["Gohan", "Raditz", "Vegeta", "Future Trunks"],
-    correct: "Future Trunks"
+    question: "What's the name of Goku and Vegeta potara fusion?",
+    options: ["Gogeta", "Gotenks", "Vegigo", "Vegito"],
+    correct: "Vegito"
+  },
+
+  {
+    question: "What planet is Piccolo's race from?",
+    options: ["Earth", "Mars", "Namek", "Vegeta"],
+    correct: "Namek"
+  },
+
+  {
+    question:
+      "What technique did Goku used to overpower Vegeta in their first fight?",
+    options: ["Hadouken", "Kamehameha", "Kaiokenx10", "Fusion"],
+    correct: "Kaiokenx10"
+  },
+
+  {
+    question: "What item is used to recover a Z fighter to their full health?",
+    options: ["kaikotsu no kima", "senzu beans", "soda", "strawberry"],
+    correct: "senzu beans"
+  },
+
+  {
+    question: "Which Super Sayian form was able to rival Majin Boo's power?",
+    options: [
+      "Super Sayian 2",
+      "Super Sayian Blue",
+      "Super Sayian 3",
+      "Super Sayian 4"
+    ],
+    correct: "Super Sayian 3"
+  },
+
+  {
+    question: "Which author created Dragon Ball Z?",
+    options: ["Makoto Shinkay", "Rintaro", "Akira Toryama", "Hiromu Arakawa"],
+    correct: "Akira Toryama"
+  },
+
+  {
+    question: "Who is Goku's best friend?",
+    options: ["Gohan", "Vegeta", "Krillin", "Piccolo"],
+    correct: "Krillin"
   }
 ];
 // populate the screen with questions and their options to pick
