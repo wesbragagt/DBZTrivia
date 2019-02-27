@@ -7,6 +7,17 @@
     <title>DBZ Trivia</title>
 
     <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Lato"
       rel="stylesheet"
     />
@@ -14,15 +25,20 @@
   </head>
   <body>
     <audio autoplay controls src="assets/audio/dbz-theme.mp3"></audio>
-    <h1>Dragon Ball Z Trivia</h1>
+    <header class="row">
+      <h1 class="m-auto">Dragon Ball Z Trivia</h1>
+    </header>
 
-    <div id="game" class="container">
-      <h2 id="time">
-        Do you think you are big fan of the show, test your knowledge now, if
-        you get every question right there is a surprise at the end.
+    <div id="game" class="container p-4 mt-4">
+      <h2 id="time" class="row m-4">
+        Put your Dragon Ball Z knowledge to test in this questionare designed
+        for the mightiest warriors on earth.
       </h2>
-      <button id="start" class="btn btn-lg btn-dark">Start</button>
-      <form id="quiz" name="quiz"></form>
+      <button id="start" class="row btn btn-lg btn-warning border">
+        <i class="fas fa-fist-raised"></i>
+        Start
+      </button>
+      <form class="p-4" id="quiz" name="quiz"></form>
 
       <div id="results"></div>
     </div>

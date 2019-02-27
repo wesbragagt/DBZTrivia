@@ -32,12 +32,29 @@ function check() {
 
   // Populate the page with results, giff and a button to restart.
 
-  results.html("<h2>" + "correct answers: " + correct + "</h2>");
-  $(
-    "<img src = 'https://media.giphy.com/media/D1SBnJEaUdZIc/giphy.gif'>"
-  ).appendTo(results);
+  results.html(
+    "<h2>" +
+      "correct answers: " +
+      correct +
+      "<br>" +
+      "incorrect or unanswered: " +
+      incorrect +
+      "</h2>"
+  );
 
-  $("<button onclick='restart();' class='btn btn-lg btn-success'/>")
+  if (correct == trivia.length) {
+    $(
+      "<img class='margin-bt' src = 'https://media.giphy.com/media/6XsJEllKKX9MQ/giphy.gif'>"
+    ).appendTo(results);
+  } else {
+    $(
+      "<img class='margin-bt' src = 'https://media.giphy.com/media/D1SBnJEaUdZIc/giphy.gif'>"
+    ).appendTo(results);
+  }
+
+  $(
+    "<button onclick='restart();' class='btn btn-lg btn-warning d-block m-auto'/>"
+  )
     .text("Restart")
     .appendTo(results);
 }
@@ -113,7 +130,9 @@ var trivia = [
 ];
 // populate the screen with questions and their options to pick
 function populate() {
-  $("<button onclick='check();'/>")
+  $(
+    "<button class='btn btn-lg btn-warning d-block ml-auto' onclick='check();'/>"
+  )
     .attr("id", "submit")
     .text("Submit")
     .insertAfter("#quiz");
@@ -123,7 +142,7 @@ function populate() {
     var questionId = "question" + convertI;
 
     // QUESTION
-    var h2 = $("<h2/>").attr({ id: questionId, class: "question" });
+    var h2 = $("<h3/>").attr({ id: questionId, class: "question margin-bt" });
     h2.text(convertI + ". " + trivia[i].question);
     $("#quiz").append(h2);
 

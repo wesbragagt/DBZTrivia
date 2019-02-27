@@ -1,16 +1,41 @@
 body {
   font-family: "Lato", sans-serif;
+  text-align: center;
+  color: #ffffff;
+
+  background: url(assets/images/fancy-cushion/fancy-cushion.png) no-repeat
+    center fixed;
+  background-size: cover;
 }
 
 .question {
   font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+div.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 2em;
+  border: solid 1px yellow;
+  padding: 1em !important;
 }
 
 .label {
-  /* margin-right: 10px; */
-  /* border: 1px solid red;
-    margin-left: px; */
+  margin-right: 5px !important;
 }
 .input {
-  margin-right: 45px;
+  margin-right: 10em !important;
+}
+
+/* utility classes */
+.margin-bt {
+  margin-bottom: 1em !important;
+}
+.border {
+  border: solid 2px orangered !important;
+}
+
+.img {
 }
