@@ -13,12 +13,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <audio autoplay controls src="assets/audio/dbz-theme.mp3"></audio>
     <h1>Dragon Ball Z Trivia</h1>
 
     <div id="game" class="container">
-      <h2 id="time">100s</h2>
+      <h2 id="time">
+        Do you think you are big fan of the show, test your knowledge now, if
+        you get every question right there is a surprise at the end.
+      </h2>
+      <button id="start" class="btn btn-lg btn-dark">Start</button>
       <form id="quiz" name="quiz"></form>
-      <button type="button" onclick="check();">Submit</button>
+
       <div id="results"></div>
     </div>
 

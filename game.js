@@ -1,6 +1,10 @@
 $(document).ready(function() {
-  populate();
-  intervalId = setInterval(decrement, 1000);
+  $("#start").on("click", function() {
+    $("#start").hide();
+
+    populate();
+    intervalId = setInterval(decrement, 1000);
+  });
 });
 
 // function check submit button
@@ -109,6 +113,11 @@ var trivia = [
 ];
 // populate the screen with questions and their options to pick
 function populate() {
+  $("<button onclick='check();'/>")
+    .attr("id", "submit")
+    .text("Submit")
+    .insertAfter("#quiz");
+
   for (var i = 0; i < trivia.length; i++) {
     var convertI = (i + 1).toString();
     var questionId = "question" + convertI;
