@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("#start").on("click", function() {
     $("#start").hide();
+    $("#info").hide();
 
     populate();
     intervalId = setInterval(decrement, 1000);
@@ -126,6 +127,41 @@ var trivia = [
     question: "Who is Goku's best friend?",
     options: ["Gohan", "Vegeta", "Krillin", "Piccolo"],
     correct: "Krillin"
+  },
+
+  {
+    question: "Who taught Goku the Kamehameha technique?",
+    options: ["Kaio-Sama", "Master Roshi", "Hercule", "Piccolo"],
+    correct: "Master Roshi"
+  },
+
+  {
+    question: "Goku went super sayian for the first time fighting...",
+    options: ["Ginyu Force", "Vegeta", "Frieza", "Nappa"],
+    correct: "Frieza"
+  },
+
+  {
+    question: "Piccolo was able to fight Android 17 toe toe because...",
+    options: [
+      "training",
+      "fused with Kami",
+      "went super sayian",
+      "called shaggy"
+    ],
+    correct: "fused with Kami"
+  },
+
+  {
+    question: "Yamcha died the first time fighting...",
+    options: ["Nappa", "Vegeta", "Raditz", "Saibamen"],
+    correct: "Saibamen"
+  },
+
+  {
+    question: "How did Goku defeat Buu?",
+    options: ["Super Sayian 3", "Fusion", "Kamehameha", "Spirit Bomb"],
+    correct: "Spirit Bomb"
   }
 ];
 // populate the screen with questions and their options to pick
