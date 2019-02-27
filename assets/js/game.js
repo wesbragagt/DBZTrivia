@@ -1,65 +1,3 @@
-$(document).ready(function() {
-  $("#start").on("click", function() {
-    $("#start").hide();
-    $("#info").hide();
-
-    populate();
-    intervalId = setInterval(decrement, 1000);
-  });
-});
-
-// function check submit button
-function check() {
-  stop();
-  var correct = 0;
-  var incorrect = 0;
-  var results = $("#game");
-  // array of select choices
-  var selected = [];
-
-  // loop through all inputs which were selected and return a value for them
-  $("input:checked").each(function() {
-    selected.push($(this).val());
-  });
-
-  // loop which will check a number of questions amount of time for matching selections with the correct answers
-  for (var i = 0; i < trivia.length; i++) {
-    if (selected[i] === trivia[i].correct) {
-      correct++;
-    } else {
-      incorrect++;
-    }
-  }
-
-  // Populate the page with results, giff and a button to restart.
-
-  results.html(
-    "<h2>" +
-      "correct answers: " +
-      correct +
-      "<br>" +
-      "incorrect or unanswered: " +
-      incorrect +
-      "</h2>"
-  );
-
-  if (correct == trivia.length) {
-    $(
-      "<img class='margin-bt' src = 'https://media.giphy.com/media/6XsJEllKKX9MQ/giphy.gif'>"
-    ).appendTo(results);
-  } else {
-    $(
-      "<img class='margin-bt' src = 'https://media.giphy.com/media/D1SBnJEaUdZIc/giphy.gif'>"
-    ).appendTo(results);
-  }
-
-  $(
-    "<button onclick='restart();' class='btn btn-lg btn-warning d-block m-auto'/>"
-  )
-    .text("Restart")
-    .appendTo(results);
-}
-
 // TRIVIA, create an array with an object and all the questions that are going to be used
 
 var trivia = [
@@ -164,6 +102,69 @@ var trivia = [
     correct: "Spirit Bomb"
   }
 ];
+
+$(document).ready(function() {
+  $("#start").on("click", function() {
+    $("#start").hide();
+    $("#info").hide();
+
+    populate();
+    intervalId = setInterval(decrement, 1000);
+  });
+});
+
+// function check submit button
+function check() {
+  stop();
+  var correct = 0;
+  var incorrect = 0;
+  var results = $("#game");
+  // array of select choices
+  var selected = [];
+
+  // loop through all inputs which were selected and return a value for them
+  $("input:checked").each(function() {
+    selected.push($(this).val());
+  });
+
+  // loop which will check a number of questions amount of time for matching selections with the correct answers
+  for (var i = 0; i < trivia.length; i++) {
+    if (selected[i] === trivia[i].correct) {
+      correct++;
+    } else {
+      incorrect++;
+    }
+  }
+
+  // Populate the page with results, giff and a button to restart.
+
+  results.html(
+    "<h2>" +
+      "correct answers: " +
+      correct +
+      "<br>" +
+      "incorrect or unanswered: " +
+      incorrect +
+      "</h2>"
+  );
+
+  if (correct == trivia.length) {
+    $(
+      "<img class='margin-bt' src = 'https://media.giphy.com/media/6XsJEllKKX9MQ/giphy.gif'>"
+    ).appendTo(results);
+  } else {
+    $(
+      "<img class='margin-bt' src = 'https://media.giphy.com/media/D1SBnJEaUdZIc/giphy.gif'>"
+    ).appendTo(results);
+  }
+
+  $(
+    "<button onclick='restart();' class='btn btn-lg btn-warning d-block m-auto'/>"
+  )
+    .text("Restart")
+    .appendTo(results);
+}
+
 // populate the screen with questions and their options to pick
 function populate() {
   $(
@@ -227,6 +228,7 @@ function stop() {
   clearInterval(intervalId);
 }
 
+// RESTART THE GAME
 function restart() {
   location.reload();
 }
