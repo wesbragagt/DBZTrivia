@@ -113,7 +113,7 @@ $(document).ready(function() {
   });
 });
 
-// function check submit button
+// FUNCTIONS
 function check() {
   stop();
   var correct = 0;
@@ -165,7 +165,7 @@ function check() {
     .appendTo(results);
 }
 
-// populate the screen with questions and their options to pick
+// Populate the screen with questions and their options to pick
 function populate() {
   $(
     "<button class='btn btn-lg btn-warning d-block ml-auto' onclick='check();'/>"
